@@ -22,6 +22,7 @@ public class EmployeeController {
     EmployeeService employeeService;
 
     @GetMapping
+    @CrossOrigin
     @ApiOperation(value = "list all employees", response = List.class)
     @ApiResponses(value = {
             @ApiResponse(code = 200, message= "Successfully retrieved"),
@@ -44,6 +45,7 @@ public class EmployeeController {
     }
 
     @GetMapping("/{id}")
+    @CrossOrigin
     @ApiOperation(value = "Get a employee based on id", response = Employee.class)
     @ApiResponses(value = {
             @ApiResponse(code = 200, message= "Successfully retrieved"),
@@ -59,6 +61,7 @@ public class EmployeeController {
     }
 
     @PostMapping
+    @CrossOrigin
     @ApiOperation(value = "save a employee", response = Employee.class)
     @ApiResponses(value = {
             @ApiResponse(code = 200, message= "Successfully saved"),
